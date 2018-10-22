@@ -36,9 +36,10 @@ def shortened_tweet_truncator(tweet)
   new_tweet = ""
   new_tweet = selective_tweet_shortener(tweet)
   if new_tweet.length > 140
-    while new_tweet.length > 140
+    while new_tweet.length > 137
       new_tweet.chop!
     end
+    new_tweet << "..."
   end
   new_tweet
 end
